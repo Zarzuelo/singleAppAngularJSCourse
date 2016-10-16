@@ -75,8 +75,8 @@ function MenuSearchService($http, ApiBasePath) {
       var rawMenu = result.data.menu_items;
       
       var filteredMenu = rawMenu.filter(function(obj){
-        var name = obj.name.toLowerCase();
-        if (name.indexOf(searchTermLowercase) !== -1) {
+        var description = obj.description.toLowerCase();
+        if (description.indexOf(searchTermLowercase) !== -1) {
             return obj;
         }
       });
